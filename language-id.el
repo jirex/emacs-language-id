@@ -63,7 +63,7 @@
     ("Assembly" asm-mode nasm-mode)
     ("Bazel" bazel-mode)
     ("BibTeX" bibtex-mode)
-    ("C" c-mode)
+    ("C" (c-mode (language-id--file-name-extension ".c")))
     ("C++" c++-mode)
     ("Clojure" clojure-mode clojurec-mode clojurescript-mode)
     ("CMake" cmake-mode)
@@ -109,7 +109,9 @@
     ("Objective-C" objc-mode)
     ("OCaml" caml-mode tuareg-mode)
     ("Perl" cperl-mode perl-mode)
-    ("PHP" php-mode)
+    ("PHP"
+     php-mode
+     (c-mode (language-id--file-name-extension ".php")))
     ("Protocol Buffer" protobuf-mode)
     ("PureScript" purescript-mode)
     ("Python" python-mode)
